@@ -1,0 +1,1 @@
+{"version":3,"file":"FileSystemGenerator.js","sourceRoot":"","sources":["../src/FileSystemGenerator.ts"],"names":[],"mappings":";;;AAAA,yDAAsD;AAEtD,MAAa,mBAAmB;IACrB,MAAM,CAAC,cAAc,CAAC,QAAgB,EAAE,UAAkB;QAC7D,MAAM,SAAS,GAAG,IAAI,CAAC,KAAK,CAAC,UAAU,CAAC,CAAC;QACzC,mCAAgB,CAAC,eAAe,CAAC,QAAQ,EAAE,SAAS,CAAC,CAAC;IAC1D,CAAC;CACJ;AALD,kDAKC"}
