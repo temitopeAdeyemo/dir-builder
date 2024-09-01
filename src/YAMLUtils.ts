@@ -3,7 +3,7 @@ export class YAMLUtils {
         for (const key in obj) {
           if (typeof obj[key] === 'object' && obj[key] !== null) {
             for (const innerKey in obj[key]) {
-              if (Array.isArray(obj[key][innerKey])) {
+              if (Array.isArray(obj[key][innerKey]) && innerKey == key) {
                 obj[key] = obj[key][innerKey];
                 break;
               }
