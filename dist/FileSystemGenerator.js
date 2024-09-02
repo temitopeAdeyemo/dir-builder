@@ -22,6 +22,7 @@ class FileSystemGenerator {
      * @throws Error if the JSON string cannot be parsed or if there is an issue with the directory creation.
      */
     static createFromJSON(jsonString, outDir) {
+        console.log(jsonString);
         const structure = JSON.parse(jsonString);
         DirectoryManager_1.DirectoryManager.createStructure(outDir, structure);
     }

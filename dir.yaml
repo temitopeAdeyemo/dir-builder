@@ -1,16 +1,10 @@
-version: 0.2
-
-phases:
-  install:
-    commands:
-      - echo "Installing dependencies"
-      - yarn install
-  build:
-    commands:
-      - echo "Building the application"
-      - yarn build
-  post_build:
-    commands:
-      - echo "Deploying the application to EC2"
-      - scp -r -i "path/to/ec2-key.pem" build ec2-user@ec2-172-31-28-99: /var/www/app
-      - ssh -i "path/to/ec2-key.pem" ec2-user@ec2-172-31-28-99 "cd /var/www/app && npm start"
+root:
+  folder1:
+    folder1:
+        folder5:
+          - file1.txt: 
+          - file2.txt: dj
+    folder3:
+      file3.txt: djs
+  folder2:
+    file4.txt: Content of file4

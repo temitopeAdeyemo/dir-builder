@@ -26,7 +26,7 @@ export class YAMLProcessor {
     } else yamlData = yamlFilePathOrSting;
 
     const jsonString = JsonGenerator.jsonFromYAML(yamlData);
-    FileSystemGenerator.createFromJSON(outDir, jsonString);
+    FileSystemGenerator.createFromJSON(jsonString, outDir);
     console.log('Folder structure created successfully.');
   }
 }

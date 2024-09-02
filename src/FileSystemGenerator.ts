@@ -21,6 +21,7 @@ export class FileSystemGenerator {
    */
 
   public static createFromJSON(jsonString: string, outDir: string) {
+    console.log(jsonString);
     const structure = JSON.parse(jsonString);
     DirectoryManager.createStructure(outDir, structure);
   }
