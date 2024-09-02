@@ -10,12 +10,12 @@ export declare class FileSystemGenerator {
      * uses the `DirectoryManager` class to create the directory structure as
      * defined by the parsed object.
      *
-     * @param basePath - The base path where the directory structure should be created.
      * @param jsonString - A JSON string representing the folder and file structure.
      *                     The JSON string should define the structure with keys for directory or file names,
      *                     and values specifying file contents or nested structures.
+     *  @param outDir - The base path where the directory structure should be created.
      *
      * @throws Error if the JSON string cannot be parsed or if there is an issue with the directory creation.
      */
-    static createFromJSON(basePath: string, jsonString: string): void;
+    static createFromJSON(jsonString: string, outDir: string): void;
 }

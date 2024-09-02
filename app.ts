@@ -1,9 +1,12 @@
-import { JsonGenerator, YAMLProcessor } from './dist';
+import { FileSystemGenerator, JsonGenerator, YAMLProcessor } from './dist';
 
-const json = JsonGenerator.jsonFromYAML("./dir.yaml", true)
+const json = JsonGenerator.jsonFromYAML('./dir.yaml', true);
 
-console.log(".........",json);
-YAMLProcessor.processYAMLFile("./dir.yaml", "output");
+console.log('.........', json);
+
+YAMLProcessor.processYAMLFile('./dir.yaml', 'output');
+FileSystemGenerator.createFromJSON('/', '{}');
+JsonGenerator.jsonFromYAML('/', true);
 
 const yamlString = `
 apiVersion: apps/v1
