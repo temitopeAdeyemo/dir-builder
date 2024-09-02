@@ -1,6 +1,6 @@
 {
   "name": "yaml-dir-builder",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "description": "Library for building file system from yaml file",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

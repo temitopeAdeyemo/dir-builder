@@ -1,1 +1,5 @@
 /node_modules
+dir.yaml
+.npmignore
+app.ts
+a.js

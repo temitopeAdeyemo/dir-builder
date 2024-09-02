@@ -2,7 +2,24 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.YAMLParser = void 0;
 const YAMLUtils_1 = require("./YAMLUtils");
+/**
+ * Utility class for parsing YAML strings into JavaScript objects.
+ * Provides a method to convert YAML formatted text into a nested JavaScript object structure.
+ */
 class YAMLParser {
+    /**
+     * Parses a YAML string and converts it into a JavaScript object.
+     *
+     * This method processes the YAML formatted string line-by-line, taking into account indentation
+     * levels and YAML syntax to construct a nested object structure. It supports basic YAML features such
+     * as lists, nested objects, and key-value pairs. Comments and blank lines are ignored during parsing.
+     *
+     * @param yamlString - A string containing YAML formatted data.
+     *
+     * @returns A JavaScript object representing the parsed YAML data.
+     *
+     * @throws Error if the YAML data is malformed or cannot be processed.
+     */
     static parseYAML(yamlString) {
         const lines = yamlString.trim().split('\n');
         const result = {};
@@ -39,7 +56,7 @@ class YAMLParser {
                 }
                 if (item.includes(':') && parent.level < currentLevel) {
                     const [listKey, ...listValue] = item.split(':').map((part) => part.trim());
-                    const valued = Array.isArray(listValue) ? listValue.join(":") : listValue;
+                    const valued = Array.isArray(listValue) ? listValue.join(':') : listValue;
                     const newObject = { [listKey]: valued };
                     parent.obj[key].push(newObject);
                     stack.push({ obj: newObject, key: listKey, level: currentLevel });
@@ -57,7 +74,7 @@ class YAMLParser {
             }
             else {
                 const [key, ...value] = content.split(':').map((part) => part.trim());
-                const valued = Array.isArray(value) ? value.join(":") : value;
+                const valued = Array.isArray(value) ? value.join(':') : value;
                 if (Array.isArray(parent.obj)) {
                     const lastItem = parent.obj[parent.obj.length - 1];
                     lastItem[key] = valued;
